@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse our beautiful gallery of wedding moments, engagements, and celebrations of love.">
+    <title>Gallery | MarryTogether</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Lightbox CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.0/css/lightgallery.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <style>
+        /* Gallery Specific Styles */
+        .gallery-container {
+            margin-top: 3rem;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .gallery-item {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+            aspect-ratio: 1;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .gallery-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover .gallery-img {
+            transform: scale(1.05);
+        }
+        
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+            color: white;
+            padding: 1.5rem 1rem 1rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-caption {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .gallery-caption h3 {
+            margin: 0 0 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .gallery-caption p {
+            margin: 0;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">MarryTogether</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="love-stories.html">Love Stories</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/gallery-hero.jpg') center/cover no-repeat; height: 50vh; display: flex; align-items: center; justify-content: center; text-align: center; color: white; margin-top: 60px;">
+        <div class="container">
+            <h1>Our Gallery</h1>
+            <p>Capturing moments of love and celebration</p>
+        </div>
+    </header>
+
+    <!-- Gallery Section -->
+    <section class="section">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="btn active" data-filter="all">All Photos</button>
+                <button class="btn btn-outline" data-filter="wedding">Weddings</button>
+                <button class="btn btn-outline" data-filter="engagement">Engagements</button>
+                <button class="btn btn-outline" data-filter="anniversary">Anniversaries</button>
+                <button class="btn btn-outline" data-filter="proposal">Proposals</button>
+            </div>
+            
+            <div class="gallery-container">
+                <div class="gallery" id="lightgallery">
+                    <!-- Photo 1 -->
+                    <a href="images/gallery-1.jpg" class="gallery-item" data-sub-html="<h3>Wedding Bells</h3><p>A magical moment as the couple exchanges rings</p>" data-category="wedding">
+                        <img src="images/gallery-1.jpg" alt="Wedding ceremony" class="gallery-img">
+                        <div class="gallery-caption">
+                            <h3>Wedding Bells</h3>
+                            <p>A magical moment as the couple exchanges rings</p>
+                        </div>
+                    </a>
+                    
+                    <!-- Photo 2 -->
+                    <a href="images/gallery-2.jpg" class="gallery-item" data-sub-html="<h3>First Kiss</h3><p>The newlyweds share their first kiss as a married couple</p>" data-category="wedding">
+                        <img src="images/gallery-2.jpg" alt="First kiss" class="gallery-img">
+                        <div class="gallery-caption">
+                            <h3>First Kiss</h3>
+                            <p>The newlyweds share their first kiss as a married couple</p>
+                        </div>
+                    </a>
+                    
+                    <!-- Photo 3 -->
+                    <a href="images/gallery-3.jpg" class="gallery-item" data-sub-html="<h3>Beach Proposal</h3><p>A romantic beachside proposal at sunset</p>" data-category="proposal">
+                        <img src="images/gallery-3.jpg" alt="Beach proposal" class="gallery-img">
+                        <div class="gallery-caption">
+                            <h3>Beach Proposal</h3>
+                            <p>A romantic beachside proposal at sunset</p>
+                        </div>
+                    </a>
+                    
+                    <!-- Photo 4 -->
+                    <a href="images/gallery-4.jpg" class="gallery-item" data-sub-html="<h3>First Dance</h3><p>The couple's magical first dance as husband and wife</p>" data-category="wedding">
+                        <img src="images/gallery-4.jpg" alt="First dance" class="gallery-img">
+                        <div class="gallery-caption">
+                            <h3>First Dance</h3>
+                            <p>The couple's magical first dance as husband and wife</p>
+                        </div>
+                    </a>
+                    
+                    <!-- Photo 5 -->
+                    <a href="images/gallery-5.jpg" class="gallery-item" data-sub-html="<h3>Golden Anniversary</h3><p>Celebrating 50 years of love and commitment</p>" data-category="anniversary">
+                        <img src="images/gallery-5.jpg" alt="Golden anniversary" class="gallery-img">
+                        <div class="gallery-caption">
+                            <h3>Golden Anniversary</h3>
+                            <p>Celebrating 50 years of love and commitment</p>
+                        </div>
+                    </a>
+                    
+                    <!-- Photo 6 -->
+                    <a href="images/gallery-6.jpg" class="gallery-item" data-sub-html="<h3>Engagement Session</h3><p>Romantic engagement photos in the autumn woods</p>" data-category="engagement">
+                        <img src="images/gallery-6.jpg" alt="Engagement photos" class="gallery-img">
+                        <div class="gallery-caption">
+                            <h3>Engagement Session</h3>
+                            <p>Romantic engagement photos in the autumn woods</p>
+                        </div>
+                    </a>
+                    
+                    <!-- Photo 7 -->
+                    <a href="images/gallery-7.jpg" class="gallery-item" data-sub-html="<h3>Vow Renewal</h3><p>Renewing their love after 25 years together</p>" data-category="anniversary">
+                        <img src="images/gallery-7.jpg" alt="Vow renewal" class="gallery-img">
+                        <div class="gallery-caption">
+                            <h3>Vow Renewal</h3>
+                            <p>Renewing their love after 25 years together</p>
+                        </div>
+                    </a>
+                    
+                    <!-- Photo 8 -->
+                    <a href="images/gallery-8.jpg" class="gallery-item" data-sub-html="<h3>Mountain Engagement</h3><p>Breathtaking engagement photos with mountain views</p>" data-category="engagement">
+                        <img src="images/gallery-8.jpg" alt="Mountain engagement" class="gallery-img">
+                        <div class="gallery-caption">
+                            <h3>Mountain Engagement</h3>
+                            <p>Breathtaking engagement photos with mountain views</p>
+                        </div>
+                    </a>
+                    
+                    <!-- Photo 9 -->
+                    <a href="images/gallery-9.jpg" class="gallery-item" data-sub-html="<h3>Sunset Kiss</h3><p>A magical moment captured at sunset</p>" data-category="proposal">
+                        <img src="images/gallery-9.jpg" alt="Sunset kiss" class="gallery-img">
+                        <div class="gallery-caption">
+                            <h3>Sunset Kiss</h3>
+                            <p>A magical moment captured at sunset</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="text-center" style="margin-top: 4rem;">
+                    <button id="load-more" class="btn">Load More Photos</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="section" style="background-color: var(--blush);">
+        <div class="container text-center">
+            <h2 class="section-title">Share Your Special Moments</h2>
+            <p style="max-width: 700px; margin: 0 auto 2rem;">
+                Have beautiful wedding or engagement photos you'd like to share with our community? We'd love to feature your love story!
+            </p>
+            <a href="contact.html" class="btn">Submit Your Photos</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="logo" style="font-size: 1.8rem; margin-bottom: 1rem;">MarryTogether</div>
+            <p>Celebrating love and togetherness, one story at a time.</p>
+            
+            <div class="social-links">
+                <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+            
+            <div class="copyright">
+                &copy; <span id="year"></span> MarryTogether. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Lightbox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.0/lightgallery.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+    
+    <script>
+        // Initialize lightGallery
+        document.addEventListener('DOMContentLoaded', function() {
+            const gallery = document.getElementById('lightgallery');
+            
+            if (gallery) {
+                lightGallery(gallery, {
+                    selector: '.gallery-item',
+                    download: false,
+                    counter: false,
+                    enableDrag: true,
+                    enableSwipe: true,
+                    speed: 500,
+                    hideBarsDelay: 2000,
+                    thumbnail: true
+                });
+            }
+            
+            // Filter functionality
+            const filterButtons = document.querySelectorAll('.filter-buttons .btn');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Update active button
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    
+                    const filterValue = button.getAttribute('data-filter');
+                    
+                    // Filter items
+                    galleryItems.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Load more functionality
+            const loadMoreBtn = document.getElementById('load-more');
+            if (loadMoreBtn) {
+                loadMoreBtn.addEventListener('click', function() {
+                    // In a real implementation, this would load more items via AJAX
+                    this.textContent = 'No more photos to load';
+                    this.style.opacity = '0.7';
+                    this.style.cursor = 'default';
+                    this.disabled = true;
+                });
+            }
+        });
+    </script>
+</body>
+</html>

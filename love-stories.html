@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover beautiful love stories from couples around the world. Real stories of love, commitment, and togetherness.">
+    <title>Love Stories | MarryTogether</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">MarryTogether</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="love-stories.html" class="active">Love Stories</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/stories-hero.jpg') center/cover no-repeat; height: 50vh; display: flex; align-items: center; justify-content: center; text-align: center; color: white; margin-top: 60px;">
+        <div class="container">
+            <h1>Love Stories</h1>
+            <p>Real stories of love, commitment, and togetherness</p>
+        </div>
+    </header>
+
+    <!-- Stories Grid -->
+    <section class="section" style="background-color: #f9f9f9;">
+        <div class="container">
+            <div class="filter-container" style="margin-bottom: 3rem; text-align: center;">
+                <button class="btn active" data-filter="all">All Stories</button>
+                <button class="btn btn-outline" data-filter="newlyweds">Newlyweds</button>
+                <button class="btn btn-outline" data-filter="anniversary">Anniversaries</button>
+                <button class="btn btn-outline" data-filter="proposal">Proposals</button>
+            </div>
+            
+            <div class="stories-grid">
+                <!-- Story 1 -->
+                <div class="story-card" data-category="newlyweds">
+                    <img src="images/story-1.jpg" alt="Sarah & James" class="story-img">
+                    <div class="story-content">
+                        <h3>Sarah & James</h3>
+                        <p>Married June 2023</p>
+                        <p class="story-excerpt" style="margin-top: 0.5rem; font-style: italic; color: #666;">A summer wedding by the beach</p>
+                    </div>
+                </div>
+                
+                <!-- Story 2 -->
+                <div class="story-card" data-category="anniversary">
+                    <img src="images/story-2.jpg" alt="Emma & David" class="story-img">
+                    <div class="story-content">
+                        <h3>Emma & David</h3>
+                        <p>10 Years Together</p>
+                        <p class="story-excerpt" style="margin-top: 0.5rem; font-style: italic; color: #666;">A decade of love and counting</p>
+                    </div>
+                </div>
+                
+                <!-- Story 3 -->
+                <div class="story-card" data-category="proposal">
+                    <img src="images/story-3.jpg" alt="Olivia & Michael" class="story-img">
+                    <div class="story-content">
+                        <h3>Olivia & Michael</h3>
+                        <p>Engaged 2023</p>
+                        <p class="story-excerpt" style="margin-top: 0.5rem; font-style: italic; color: #666;">A surprise proposal in Paris</p>
+                    </div>
+                </div>
+                
+                <!-- Story 4 -->
+                <div class="story-card" data-category="newlyweds">
+                    <img src="images/story-4.jpg" alt="Sophia & William" class="story-img">
+                    <div class="story-content">
+                        <h3>Sophia & William</h3>
+                        <p>Married September 2023</p>
+                        <p class="story-excerpt" style="margin-top: 0.5rem; font-style: italic; color: #666;">A rustic barn wedding</p>
+                    </div>
+                </div>
+                
+                <!-- Story 5 -->
+                <div class="story-card" data-category="anniversary">
+                    <img src="images/story-5.jpg" alt="Ava & Benjamin" class="story-img">
+                    <div class="story-content">
+                        <h3>Ava & Benjamin</h3>
+                        <p>25 Years Together</p>
+                        <p class="story-excerpt" style="margin-top: 0.5rem; font-style: italic; color: #666;">A quarter-century of love</p>
+                    </div>
+                </div>
+                
+                <!-- Story 6 -->
+                <div class="story-card" data-category="proposal">
+                    <img src="images/story-6.jpg" alt="Mia & Ethan" class="story-img">
+                    <div class="story-content">
+                        <h3>Mia & Ethan</h3>
+                        <p>Engaged 2022</p>
+                        <p class="story-excerpt" style="margin-top: 0.5rem; font-style: italic; color: #666;">A mountaintop proposal</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pagination" style="margin-top: 4rem; text-align: center;">
+                <a href="#" class="btn btn-outline" style="margin: 0 0.5rem;"><i class="fas fa-chevron-left"></i> Previous</a>
+                <a href="#" class="btn btn-outline" style="margin: 0 0.5rem;">1</a>
+                <a href="#" class="btn btn-outline active" style="margin: 0 0.5rem;">2</a>
+                <a href="#" class="btn btn-outline" style="margin: 0 0.5rem;">3</a>
+                <a href="#" class="btn btn-outline" style="margin: 0 0.5rem;">Next <i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="section" style="background-color: var(--gold); color: white; text-align: center;">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Share Your Love Story</h2>
+            <p style="max-width: 700px; margin: 0 auto 2rem; font-size: 1.1rem;">
+                Every love story is unique and beautiful in its own way. We'd love to hear yours!
+            </p>
+            <a href="contact.html" class="btn" style="background-color: white; color: var(--gold);">Share Your Story</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="logo" style="font-size: 1.8rem; margin-bottom: 1rem;">MarryTogether</div>
+            <p>Celebrating love and togetherness, one story at a time.</p>
+            
+            <div class="social-links">
+                <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+            
+            <div class="copyright">
+                &copy; <span id="year"></span> MarryTogether. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
